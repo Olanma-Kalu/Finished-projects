@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-commerce</title>
+    <style>
+    .img1 {
+        width: 7rem;
+        height:7rem ;
+    }
+    </style>
+</head>
+<body>
+   
+
+    <header>
+        <h1>Welcome to Our E-commerce Store</h1>
+    </header>
+    
+    <section id="products">
+        <img class="img1" src="ikmg2.jpg" alt="">
+        <!-- Product listing will be generated here using JavaScript -->
+    </section>
+
+      
+    <script>
+        // Sample product data (in reality, this data would come from a database)
+        const products = [
+            { id: 1, name: 'Product 1', price: 10 },
+            { id: 2, name: 'Product 2', price: 20 },
+            { id: 3, name: 'Product 3', price: 30 },
+            { id: 4, name: 'Product 4', price: 40 },
+        ];
+
+        // Function to generate product listings
+        function generateProductList() {
+            const productList = document.getElementById('products');
+
+            products.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.classList.add('product');
+                productDiv.innerHTML = `
+                    <h2>${product.name}</h2>
+                    <p>Price: $${product.price}</p>
+                    <button onclick="addToCart(${product.id})">Add to Cart</button>
+                `;
+                productList.appendChild(productDiv);
+            });
+        }
+
+        // Function to simulate adding a product to the cart
+        function addToCart(productId) {
+            alert(`Product with ID ${productId} added to cart`);
+        }
+
+        // Generate the product listings when the page loads
+        window.onload = generateProductList;
+    </script>
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+

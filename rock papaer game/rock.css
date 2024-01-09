@@ -1,0 +1,38 @@
+body {
+  font-family: Arial;
+  background-color: rgb(43, 97, 97);
+
+ 
+}
+
+button {
+  background-color: brown;
+  color: #FFF;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  margin-left: 18rem;
+  border-radius: 3px;
+  margin-top: 8rem;
+  /* margin-inline: 1rem; */
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: rgb(141, 2, 2);
+}
+
+h4 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 2rem;
+}
+
+p {
+  line-height: 1.3rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
